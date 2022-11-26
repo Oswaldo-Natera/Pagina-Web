@@ -9,10 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
         header{
-            background-color: gray;
+            background-color: #F39C12;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         #nombre{
             padding-right: 20px;
@@ -20,9 +22,10 @@
         aside{
             background-color: cyan;
             width: 25%;
-            height: 200%;
+            height: 93.8%;
             float: left;
             bottom: 0;
+            position: absolute;
         }
         body{
             position: relative;
@@ -39,13 +42,30 @@
             position: absolute;
             text-align: center;
             
-        }  
+        }
+        img{
+            height: 60px;
+            width: 80px;
+        }
+        .Logo{
+            display: flex;
+            margin-left: 2%;
+            color: white;
+            align-items: center;
+        }
+        .Right{
+            width: 75%;
+            align-items: flex-end;
+        }
+        main{
+            align-content: space-between;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="Logo">
-            <img src="" alt="Logo">
+            <img src="Logo_Ferreweb.jpg" alt="Logo">
             <h2>FerreWeb</h2>
         </div>
         <div id="nombre">
@@ -59,7 +79,7 @@
     </header>
 
     <main>
-        <aside>
+        <aside class="Left">
             <h2>Categorias</h2>
             <br>
             <a href="">Pinturas y Disolventes</a>
@@ -72,8 +92,9 @@
             <hr>
             <a href="">Tuberias</a>
             <hr>
+            <a href="">Construcción</a>
         </aside>
-        <section>
+        <section class="Right">
             <div class="album py-5 bg-light">
                 <div class="container">
 
