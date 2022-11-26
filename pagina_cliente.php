@@ -53,12 +53,8 @@
             color: white;
             align-items: center;
         }
-        .Right{
+        section{
             width: 75%;
-            align-items: flex-end;
-        }
-        main{
-            align-content: space-between;
         }
     </style>
 </head>
