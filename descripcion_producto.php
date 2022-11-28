@@ -23,16 +23,6 @@
             width: 100%;
             height: 100%;
         }
-        footer{
-            background-color: gray;
-            width: 100%;
-            max-width: 100%;
-            padding:15px;
-            bottom: 0;
-            position: absolute;
-            text-align: center;
-            align-items: center;
-        }
         button{
             float: right;
             margin-right: 25px;
@@ -40,7 +30,7 @@
     </style>
 </head>
 <body><?php 
-include "./header.php"
+include "./header_usuario.php"
 ?>
     <br>
     <div class="container marketing">

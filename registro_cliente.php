@@ -57,6 +57,10 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .footer{
+        position: relative
+      }
     </style>
 
     
@@ -159,8 +163,8 @@
       </div>
     </div>
   </main>
-  <?php include "./footer.php"
-?>    
+    <?php include "./footer.php"
+?>   
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

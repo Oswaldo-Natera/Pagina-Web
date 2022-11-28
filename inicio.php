@@ -18,15 +18,7 @@
         position: absolute;
         padding-bottom: 3em;
         min-height: 100vh;
-      }
-      .footer{
-        width: 100%;
-        max-width: 100%;
-        padding: 0 15px;
-        bottom: 0;
-        position:relative;
-        text-align: center;
-      }      
+      }   
     </style>
   </head>
 <body>

@@ -47,15 +47,6 @@
             width: 100%;
             height: 100%;
         }
-        footer{
-            width: 100%;
-            max-width: 100%;
-            padding: 0 15px;
-            bottom: 0;
-            position: absolute;
-            text-align: center;
-            
-        }
         .opciones{
             margin-left: 10px;
         }                    

@@ -4,7 +4,7 @@
             max-width: 100%;
             padding: 0 15px;
             bottom: 0;
-            position: absolute;
+            position:fixed;
             text-align: center;
         }
 </style>

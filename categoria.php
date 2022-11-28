@@ -59,7 +59,8 @@ include "header_admin.php"
                <form action="agregar_categoria.php" method="post">
                     <label for="categoria">Categoria</label>
                     <input class="form-control" type="text" name="categoria" placeholder="Nueva Categoria" aria-label="default input example">
-                    <button type="submit">Agregar</button>
+                    <br>
+                    <button type="submit" class="btn btn-warning">Agregar</button>
                 </form> 
             </div>
         </div>
