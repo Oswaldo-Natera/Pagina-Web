@@ -1,5 +1,14 @@
 <?php
-    session_start()
+    session_start();
+    require("database.php");
+
+    $db = new Database();
+    $connection = $db->connect();
+    
+    $query = $connection->prepare("SELECT codigo, producto, precio_venta, categoria FROM producto INNER JOIN categoria ON producto.idCategoria = categoria.idCategoria");
+    $query->execute();
+
+    $categorias = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,10 +58,7 @@
         }
         .opciones{
             margin-left: 10px;
-        }
-        form{
-            margin: 15px;
-        }                    
+        }                 
     </style>
 </head>
 <body>
@@ -83,13 +89,29 @@
                 <hr>
                 <a href="" class="opciones">Ventas</a>
                 <hr>
+                <a href="" class="opciones">Productos</a>
             </div>
             <div class="col-9">
-               <form action="agregar_categoria.php" method="post">
-                    <label for="categoria">Categoria</label>
-                    <input class="form-control" type="text" name="categoria" placeholder="Nueva Categoria" aria-label="default input example">
-                    <button type="submit">Agregar</button>
-                </form> 
+                <center><table>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($categorias as $key => $categoria){ ?>
+                        <tr>
+                            <td><?php echo $categoria["codigo"] ?></td>
+                            <td><?php echo $categoria["producto"] ?></td>
+                            <td>$<?php echo $categoria["precio_venta"] ?></td>
+                            <td><?php echo $categoria["categoria"] ?></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table></center>
             </div>
         </div>
     </div>
@@ -100,11 +122,3 @@
     </footer>       
 </body>
 </html>
-
-
-
-
-
-
-
-    

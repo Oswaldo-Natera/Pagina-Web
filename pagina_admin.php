@@ -80,6 +80,7 @@
                 <hr>
                 <a href="" class="opciones">Ventas</a>
                 <hr>
+                <a href="producto_categoria.php" class="opciones">Productos</a>
             </div>
             <div class="col-9">
 
