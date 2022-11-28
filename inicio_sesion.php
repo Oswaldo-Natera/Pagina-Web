@@ -84,7 +84,7 @@
         </label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
-        <p>¿No tienes cuenta? <a href="">Registrarse</a></p>
+        <p>¿No tienes cuenta? <a href="registro_cliente.php">Registrarse</a></p>
         <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </form>
     </main>
