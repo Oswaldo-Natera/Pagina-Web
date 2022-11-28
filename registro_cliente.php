@@ -75,11 +75,11 @@
 
     <div class="row g-5">
       <div class="col-md-12 col-lg-12">
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" method="post" action="agregar_cliente.php" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" pattern="^[0-9]$" required>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" name="nombre" required>
               <div class="invalid-feedback">
                 Su nombre es requerido.
               </div>
@@ -87,7 +87,7 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" name="apellido" required>
               <div class="invalid-feedback">
                 Su apellido es requerido.
               </div>
@@ -95,7 +95,7 @@
 
             <div class="col-12">
               <label for="dni" class="form-label">Nro. Documento</label>
-              <input type="number" class="form-control" id="dni" placeholder="" required>
+              <input type="number" class="form-control" id="dni" placeholder="" name="dni" required>
               <div class="invalid-feedback">
                 Su número de documento es requerido.
               </div>
@@ -103,7 +103,7 @@
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Tu@ejemplo.com" required>
+              <input type="email" class="form-control" id="email" placeholder="Tu@ejemplo.com" name="email" required>
               <div class="invalid-feedback">
                 Por favor no dejar en blanco e incluya "@".
               </div>
@@ -111,9 +111,9 @@
 
             <div class="col-12">
               <label for="address" class="form-label">Dirección</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" name="direccion" required>
               <div class="invalid-feedback">
-                Por favor, digite su correo electronico.
+                Por favor, digite su dirección.
               </div>
             </div>
           </div>
@@ -123,31 +123,31 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" value="1" required>
               <label class="form-check-label" for="credit">Tarjeta de Crédito</label>
             </div>
             <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" value="2" required>
               <label class="form-check-label" for="debit">Tarjeta de Débito</label>
             </div>
           </div>
             <div class="col-sm-12">
               <label for="tarjeta" class="form-label">Número de Tarjeta</label>
-              <input type="number" class="form-control" id="tarjeta" placeholder="" value="" required>
+              <input type="number" class="form-control" id="tarjeta" placeholder="" value="" name="tarjeta" required>
               <div class="invalid-feedback">
                 Su número de tarjeta es requerido.
               </div>
             </div>
             <div class="col-sm-12">
               <label for="pwd" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="pwd" placeholder="" value="" required>
+              <input type="password" class="form-control" id="pwd" placeholder="" value="" name="pwd" required>
               <div class="invalid-feedback">
                 Se requiere una contraseña
               </div>
             </div>
             <div class="col-sm-12">
               <label for="pwd2" class="form-label">Confirmación de la contraseña</label>
-              <input type="password" class="form-control" id="pwd2" placeholder="" value="" required>
+              <input type="password" class="form-control" id="pwd2" placeholder="" value="" name="pwd" required>
               <div class="invalid-feedback">
               Se requiere una contraseña
               </div>

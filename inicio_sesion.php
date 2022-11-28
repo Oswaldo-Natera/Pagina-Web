@@ -65,16 +65,16 @@
 </head>
 <body class="text-center">
     <main class="form-signin w-100 m-auto">
-    <form>
+    <form action="verificar.php" method="post">
         <img class="mb-4" src="Logo_Ferreweb.jpg" alt="Logo" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Inicio de Sesión</h1>
 
         <div class="form-floating">
-            <input type="number" class="form-control" id="floatingInput" placeholder="Documento">
+            <input type="number" class="form-control" id="floatingInput" name="documento" placeholder="Documento">
             <label for="floatingInput">Documento</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+            <input type="password" class="form-control" id="floatingPassword" name="contrasena" placeholder="Contraseña">
             <label for="floatingPassword">Contraseña</label>
         </div>
 

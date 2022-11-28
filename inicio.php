@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <img src="/FerreWeb/Logo_Ferreweb.jpg" alt="Logo">
+        <img src="Logo_Ferreweb.jpg" alt="Logo" width="70px" height="60px">
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -46,13 +46,13 @@
       </ul>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Iniciar Sesión 
+        <button type="button" class="btn btn-outline-primary me-2" onclick="inicio_sesion()">Iniciar Sesión 
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
           </svg>
         </button>
-        <button type="button" class="btn btn-primary">Registrarse</button>
+        <button type="button" class="btn btn-primary" onclick="registro_cliente()">Registrarse</button>
       </div>
     </header>
 </div>
@@ -121,5 +121,13 @@
     </div>
   </footer>
 </body>
+<script>
+  function inicio_sesion(){
+    window.location.href="inicio_sesion.php"
+  }
+  function registro_cliente(){
+    window.location.href="registro_cliente.php"
+  }
+</script>
 </html>
 <!-- http://localhost/php-oa/FerreWeb/inicio.php -->
