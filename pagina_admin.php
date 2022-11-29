@@ -49,21 +49,7 @@ include "header_admin.php"
 ?>
     <div class="container-fluit">
         <div class="row">
-            <div class="col-3">
-                <a href="" class="opciones">Agregar Proveedores</a>
-                <hr>
-                <a href="producto.php" class="opciones">Agregar Productos</a>
-                <hr>
-                <a href="categoria.php" class="opciones">Agregar Categoria</a>
-                <hr>
-                <a href="" class="opciones">Clientes</a>
-                <hr>
-                <a href="" class="opciones">Ventas</a>
-                <hr>
-                <a href="producto_categoria.php" class="opciones">Productos</a>
-                <hr>
-                <a href="./eliminar_producto1.php">Eliminar producto</a>
-            </div>
+            <?php include "menu.php" ?>
             <div class="col-9">
 
             </div>
