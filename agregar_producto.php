@@ -23,8 +23,8 @@
         }
 
 
-        $query = $connection->prepare("INSERT INTO producto(producto,descripcion,imagen,precio_compra,precio_venta,idCategoria) VALUES (:producto, :descripcion, :imagen, :precio_compra, :precio_venta, :idCategoria)");
-        $resultado = $query->execute(['producto'=>$producto, 'descripcion'=>$descripcion, 'imagen'=>$imagen, 'precio_compra'=>$precio_compra, 'precio_venta'=>$precio_venta, 'idCategoria'=>"$c"]);
+        $query = $connection->prepare("INSERT INTO producto(producto,descripcion,imagen,precio_venta,idCategoria) VALUES (:producto, :descripcion, :imagen, :precio_venta, :idCategoria)");
+        $resultado = $query->execute(['producto'=>$producto, 'descripcion'=>$descripcion, 'imagen'=>$imagen, 'precio_venta'=>$precio_venta, 'idCategoria'=>"$c"]);
 
         if ($resultado) {
             echo "<h2>Producto creado con exito</h2>";

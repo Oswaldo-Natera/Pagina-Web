@@ -61,6 +61,8 @@ include "header_admin.php"
                 <a href="" class="opciones">Ventas</a>
                 <hr>
                 <a href="producto_categoria.php" class="opciones">Productos</a>
+                <hr>
+                <a href="./eliminar_producto1.php">Eliminar producto</a>
             </div>
             <div class="col-9">
 

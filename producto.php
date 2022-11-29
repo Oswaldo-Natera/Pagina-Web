@@ -69,6 +69,7 @@ include "header_admin.php"
                 <hr>
                 <a href="" class="opciones">Ventas</a>
                 <hr>
+                
             </div>
             <div class="col-9">
                 <form action="agregar_producto.php" method="post" enctype="multipart/form-data">
