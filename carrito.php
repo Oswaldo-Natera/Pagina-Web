@@ -65,39 +65,31 @@
                 <a href="" class="categoria">Construcción</a>
             </div>
             <div class="col-9">
-                <form action="carrito.php" method="post">
-                <div class="album py-5 bg-light">
-                    <div class="container">
-
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <?php $p = array(); ?>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <?php foreach($productos as $key => $producto){ ?>
-                        <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="data:image/jpg;base64,<?php echo base64_encode($producto["imagen"]) ?>" class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
-
-                            <div class="card-body">
-                            <p class="card-text"><?php echo $producto["descripcion"] ?>.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                <input type="checkbox" name="<?php echo $producto["codigo"] ?>" id="producto" value="<?php echo $producto["codigo"] ?>"><label for="producto">Elegir</label>
-                                <input type="number" name="cantidad" id="cantidad" placeholder="cantidad">
-                                </div>
-                                <small class="text-muted">$<?php echo $producto["precio_venta"] ?></small>
-                            </div>
-                            <input type="submit" value="Carrito">
-                            </div>
-                        </div>
-                        </div>
+                        <?php foreach($_SESSION["producto"] as $key => $p){ ?>
+                        <tr>
+                            <th><?php if ($key==$producto) {
+                                echo $producto;
+                            } ?></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <?php } ?>
                     <?php } ?>
-                    </div>
-                    </div>
-                </div>
-                </form>
-                <?php if(isset($_POST[$producto["codigo"]])){
-                    array_push($producto["codigo"],$p);
-                }
-                $_SESSION["producto"]=$p; ?>               
+                    </tbody>
+                </table>              
             </div>
         </div>
     </div>
