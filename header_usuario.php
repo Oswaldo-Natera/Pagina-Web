@@ -11,7 +11,7 @@
 
 <header>
         <div class="Logo">
-            <img src="Logo_Ferreweb.jpg" alt="Logo">
+            <a href="./pagina_cliente.php"><img src="Logo_Ferreweb.jpg"  alt="Logo"></a>
             <h2>FerreWeb</h2>
         </div>
         <div id="nombre">

@@ -56,22 +56,11 @@
 <?php 
 include "header_admin.php"
 ?>
-    <div class="container-fluit">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-3">
-                <a href="" class="opciones">Agregar Proveedores</a>
-                <hr>
-                <a href="producto.php" class="opciones">Agregar Productos</a>
-                <hr>
-                <a href="categoria.php" class="opciones">Agregar Categoria</a>
-                <hr>
-                <a href="" class="opciones">Clientes</a>
-                <hr>
-                <a href="" class="opciones">Ventas</a>
-                <hr>
-                <a href="" class="opciones">Productos</a>
-            </div>
-            <div class="col-9">
+            <?php include "menu.php" ?>
+            <div class="col-9">  
+            <a href="producto.php" class="opciones">Agregar Productos</a>
                 <center><table>
                     <thead>
                         <tr>
@@ -88,6 +77,8 @@ include "header_admin.php"
                             <td><?php echo $categoria["producto"] ?></td>
                             <td>$<?php echo $categoria["precio_venta"] ?></td>
                             <td><?php echo $categoria["categoria"] ?></td>
+                            <td><a href="editar_producto.php?codigo=<?php echo $categoria["codigo"]?>">Editar</a></td>
+                            <td><a href="eliminar_producto.php?codigo=<?php echo $categoria["codigo"]?>">Eliminar</a></td>
                         </tr>
                     <?php } ?>
                     </tbody>
