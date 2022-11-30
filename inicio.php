@@ -18,22 +18,14 @@
         position: absolute;
         padding-bottom: 3em;
         min-height: 100vh;
-      }
-      .footer{
-        width: 100%;
-        max-width: 100%;
-        padding: 0 15px;
-        bottom: 0;
-        position:relative;
-        text-align: center;
-      }      
+      }   
     </style>
   </head>
 <body>
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <a href="./inicio.php" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <img src="Logo_Ferreweb.jpg" alt="Logo" width="70px" height="60px">
       </a>
 
@@ -113,13 +105,8 @@
     <!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->
-  
-
-  <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-      <span class="text-muted">&copy; 2017–2022 FerreWeb | Todos los derechos reservados</span>
-    </div>
-  </footer>
+  <?php include "./footer.php"
+?>    
 </body>
 <script>
   function inicio_sesion(){

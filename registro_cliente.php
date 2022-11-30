@@ -57,6 +57,10 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .footer{
+        position: relative
+      }
     </style>
 
     
@@ -159,11 +163,8 @@
       </div>
     </div>
   </main>
-
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017–2022 FerreWeb</p>
-  </footer>
-</div>
+    <?php include "./footer.php"
+?>   
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

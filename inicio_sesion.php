@@ -88,6 +88,8 @@
         <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </form>
     </main>
+    <?php include "./footer.php"
+?>    
 </body>
 </html>
 <!-- https://localhost/php-oa/FerreWeb/inicio_sesion.php -->
