@@ -1,7 +1,7 @@
 <?php
     if ($_POST["documento"]==1000411616 and $_POST["contrasena"]=="miguelZap") {
         session_start();
-        $_SESSION["administrador"] = "Oswaldo Natera";
+        $_SESSION["administrador"] = "Miguel Zapata";
         header("location:pagina_admin.php");
     }
     elseif ($_POST["documento"]==4901172 and $_POST["contrasena"]=="oswaldoanm") {

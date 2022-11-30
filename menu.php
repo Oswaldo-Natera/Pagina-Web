@@ -3,7 +3,7 @@
     <hr>
     <a href="categoria.php" class="opciones">Agregar Categoria</a>
     <hr>
-    <a href="" class="opciones">Clientes</a>
+    <a href="ver_cliente.php" class="opciones">Clientes</a>
     <hr>
     <a href="" class="opciones">Ventas</a>
     <hr>
