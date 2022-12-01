@@ -1,14 +1,20 @@
 <?php
     session_start();
     require('database.php');
-
+    
     $db = new Database();
     $connection = $db->connect();
-    
-    $query = $connection->prepare("SELECT * FROM producto");
+    $a =$_SESSION["producto"];
+    // $p=array();
+    // array_push($a, $p);
+    #
+    $query = $connection->prepare("SELECT * FROM producto")or die($connection->error);
     $query->execute();
-
     $productos = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+
+    
 
 ?>
 <!DOCTYPE html>
@@ -66,8 +72,9 @@
                 <a href="" class="categoria">Construcción</a>
             </div>
             <div class="col-9">
-                <table>
-                    <thead>
+                <br>
+                <table class="table">
+                    <thead class="table-dark">
                         <tr>
                             <th>Codigo</th>
                             <th>Producto</th>
@@ -77,18 +84,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php foreach($productos as $key => $producto){ ?>
-                        <?php foreach($_SESSION["producto"] as $key => $p){ ?>
-                        <tr>
-                            <th><?php if ($key==$producto) {
-                                echo $producto;
-                            } ?></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <?php } ?>
-                    <?php } ?>
+                    
+                    <?php
+                    $con=0;
+                    foreach ($productos as $key => $producto) {
+                        $con++;
+                        if (isset($_POST["producto_".$con])){
+                            if ($_POST["producto_".$con]==$producto["codigo"]) { ?>
+                                <tr>
+                                        <td><?php echo $producto["codigo"]?></td>
+                                        <td><?php echo $producto["producto"] ?></td>
+                                        <td>$<?php echo $producto["precio_venta"] ?></td>
+                                        <td>$<?php echo intval($_POST["cantidad"]) ?></td>
+                                        <td>$<?php echo intval($producto["precio_venta"])*intval($_POST["cantidad"]) ?></td>
+                                    </tr> 
+                            <?php }
+                        }
+                    }?>
+                                   
+                               
+                           
+                  
+                    
                     </tbody>
                 </table>              
             </div>
