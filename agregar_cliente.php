@@ -28,5 +28,5 @@
         } else {
             echo "<h2>Error al registrar</h2>";
         }
-        echo "<a href='inicio.php'>Regresar</a>" ;
+        echo "<a href='index.php'>Regresar</a>" ;
     }

@@ -7,4 +7,4 @@ setcookie(session_name(),'', time()-99999,
 $parametros[ "path"],$parametros["domain"], $parametros [ "secure"],$parametros["httponly"]);
 }
     session_destroy();
-    header("location:inicio.php");
+    header("location:index.php");
