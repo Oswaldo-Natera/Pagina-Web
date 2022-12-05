@@ -84,16 +84,16 @@
         <form class="needs-validation" method="post" action="agregar_cliente.php" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" name="nombre" required>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="" value="" name="nombre" required>
               <div class="invalid-feedback">
                 Su nombre es requerido.
               </div>
             </div>
 
             <div class="col-sm-6">
-              <label for="lastName" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" name="apellido" required>
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" placeholder="" value="" name="apellido" required>
               <div class="invalid-feedback">
                 Su apellido es requerido.
               </div>

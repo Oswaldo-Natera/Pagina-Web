@@ -9,6 +9,7 @@
         $_SESSION["administrador"] = "Oswaldo Natera";
         header("location:pagina_admin.php");
     }else {
+    
        require("database.php");
 
         $db = new Database();
@@ -20,8 +21,8 @@
         $consulta = $query->fetchAll(PDO::FETCH_ASSOC);
 
         foreach($consulta as $key => $dato){
-            if ($_POST["documento"]==$dato["dni"]) {
-                if ($_POST["contrasena"]==$dato["contrasena"]) {
+            if ($_POST["documento"]==$dato["dni"] and preg_match_All('/^[0-9]+$/',$_POST["documento"])) {
+                if ($_POST["contrasena"]==$dato["contrasena"] and preg_match_All('/^[A-Za-z0-9]+$/',$_POST["contrasena"])) {
                     session_start();
                     $_SESSION["usuario"] = $dato["nombre"]." ".$dato["apellido"];
                     header("location:pagina_cliente.php");
